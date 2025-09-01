@@ -1,0 +1,14 @@
+mongodb+srv://SenaiSaoCarlos_user_bd:senai12345@users.iwbpe4n.mongodb.net/?retryWrites=true&w=majority&appName=users
+usuario: SenaiSaoCarlos_user_bd
+senha: senai12345
+https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/mongodb/connect-your-database-typescript-mongodb
+
+//para ficar fixo o nome senai são carlos no js depois que criado
+const novaAvaliacao = {
+  nomeInstituicao: "Senai São Carlos", // fixo
+  nota: 5,
+  comentario: "Ótimo serviço!",
+  dataHora: new Date()
+};
+
+await prisma.avaliacao.create({ data: novaAvaliacao });
