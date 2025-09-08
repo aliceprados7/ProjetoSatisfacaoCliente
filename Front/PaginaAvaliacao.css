@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    height: 100vh; /* altura da tela */
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;  
+    background-color: rgb(189, 186, 186);
+}
+     header {
+            display: flex;           /* Coloca os itens em linha */
+            align-items: center;     /* Centraliza verticalmente */
+            padding: 10px;
+            background-color: rgb(233, 35, 35);  /* Só para visualização */
+            position: fixed; top: 0;left: 0;right: 0;
+        }
+
+        header a {
+            text-decoration: none;
+            color: rgb(236, 231, 231);
+            font-size: 30px;
+            margin-right: 10px;      /* Espaço entre a seta e a imagem */
+        }
+
+        header img {
+            width: 30px;   /* Define o tamanho da imagem */
+            height: 30px;  /* Mantém proporção ou define altura */
+        }
+        .card {
+            width: 700px;                /* Largura do card */
+            border: 1px ;      /* Borda */
+            border-radius: 10px;         /* Cantos arredondados */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra */
+            overflow: hidden;            /* Esconde conteúdo que ultrapassa */
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f3eded;
+            display: flex; /* Adicionado para flexbox */
+            flex-direction: column; /* Coloca os itens em coluna */
+            align-items: center; /* Centraliza itens horizontalmente */
+            text-align: center; /* Centraliza texto dentro do card */
+           }
+         h1{
+            text-align: center;
+            color: rgb(235, 12, 12);
+         }
+
+    .comentario-container {
+    width: 100%; /* Ajustado para 100% da largura do pai (.card) */
+    background-color:  #f3eded;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+    display: flex; /* Adicionado para flexbox */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza itens horizontalmente */
+  }
+
+ textarea {
+    width: 90%; /* Ajuste a largura do textarea para ser um pouco menor que o container */
+    max-width: 600px; /* Opcional: define uma largura máxima para o textarea */
+    height: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none; /* impede o redimensionamento */
+    font-size: 14px;
+    margin-bottom: 10px; /* Adicionado um pouco de margem abaixo do textarea */
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(235, 12, 12);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
