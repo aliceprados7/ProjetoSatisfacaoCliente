@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - SENAI</title>
+  <link rel="stylesheet" href="PgLogin.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bem vindo!</h1>
+
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="E-mail" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    // Quando o back-end estiver pronto, você pode trocar esta parte por um fetch() para a API
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      // Simulação temporária
+      if (email === "admin@senai.com" && senha === "1234") {
+        window.location.href = "PgControleAdmin.html"; // redireciona para a página principal
+      } else {
+        alert("E-mail ou senha incorretos!");
+      }
+    });
+  </script>
+</body>
+</html>

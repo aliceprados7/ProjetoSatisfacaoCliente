@@ -1,0 +1,58 @@
+/* Define o estilo geral da página */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #e4dfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Container do login */
+.login-container {
+  background-color: #cdc6c6;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* Título */
+.login-container h1 {
+  color: #6254e7;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Campos de entrada */
+.login-container input {
+  display: block;
+  width: 280px;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #f6f0f0;
+  font-size: 1rem;
+}
+
+/* Botão */
+.login-container button {
+  margin-top: 15px;
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6254e7;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Efeito hover */
+.login-container button:hover {
+  background-color: #5143d9;
+}
