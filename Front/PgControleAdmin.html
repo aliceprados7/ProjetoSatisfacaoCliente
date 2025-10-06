@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SENAI</title>
+    <link rel="stylesheet" href="PgControleAdmin.css">
+</head>
+<body>
+    <header class="topbar">
+        <button class="menu-btn" id="menuToggle">☰</button>
+        <h1>Olá, <span>SENAI!</span></h1>
+        <div class="user-actions">
+            <button class="icon-btn">👤</button>
+            <button class="logout-btn">← Sair</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <button class="side-btn add"><span>➕</span> Adicionar novo departamento</button>
+            <button class="side-btn monitor"><span>🔍</span> Monitorar</button>
+            <button class="side-btn profile"><span>👤</span> Tocar de perfil</button>
+
+            <div class="roles">
+                <p><a href="#">Administrador</a></p>
+                <p><a href="#">Usuário</a></p>
+            </div>
+        </aside>
+
+        <main class="content" id="content">
+            <h2>Departamentos</h2>
+            <div class="departamento-card">
+                <p>Secretaria</p>
+                <button id="btnNovaAvaliacao" class="nova-avaliacao">Nova Avaliação</button>
+                <button class="monitorar">🔍 Monitorar</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Redireciona para página de avaliação
+        document.getElementById("btnNovaAvaliacao").addEventListener("click", function() {
+            window.location.href = "PaginaAvaliacao.html";
+        });
+
+        // Abre/fecha o menu lateral e ajusta o conteúdo
+        const menuBtn = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("content");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("closed");
+            content.classList.toggle("expanded");
+        });
+    </script>
+</body>
+</html>

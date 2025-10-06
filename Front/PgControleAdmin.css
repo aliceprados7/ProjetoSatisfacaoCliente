@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #e9e5e6;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* ===== Topo ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9e5e6;
+    padding: 10px 20px;
+    border-bottom: 1px solid #cfcaca;
+}
+
+.menu-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.topbar h1 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #4a4a4a;
+}
+
+.topbar h1 span {
+    color: #5445f2;
+    font-weight: 600;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logout-btn {
+    background-color: #5445f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    opacity: 0.9;
+}
+
+/* ===== Layout principal ===== */
+.container {
+    display: flex;
+    height: calc(100vh - 50px);
+    transition: all 0.3s ease;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: 230px;
+    background-color: #f4f2f3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: 1px solid #d1cdcd;
+    height: calc(100vh - 50px);
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+
+/* Fechada */
+.sidebar.closed {
+    transform: translateX(-230px);
+}
+
+/* ===== Botões da sidebar ===== */
+.side-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.side-btn:hover {
+    background-color: #ececec;
+}
+
+.roles {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.roles a {
+    text-decoration: none;
+    color: #5445f2;
+    display: block;
+    margin: 5px 0;
+}
+
+/* ===== Conteúdo principal ===== */
+.content {
+    flex: 1;
+    padding: 40px;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    margin-left: 0;
+}
+
+/* Quando o menu estiver fechado, o conteúdo expande */
+.content.expanded {
+    margin-left: -230px;
+}
+
+/* ===== Departamento Card ===== */
+.content h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.departamento-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.departamento-card p {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.nova-avaliacao {
+    background-color: #5445f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.monitorar {
+    background-color: #e5e0e0;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.monitorar:hover {
+    background-color: #dcd7d7;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        height: calc(100vh - 50px);
+        transform: translateX(-230px);
+        z-index: 10;
+    }
+
+    .sidebar.closed {
+        transform: translateX(-230px);
+    }
+
+    .sidebar:not(.closed) {
+        transform: translateX(0);
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content.expanded {
+        margin-left: 0;
+    }
+}
