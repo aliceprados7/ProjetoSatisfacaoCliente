@@ -12,3 +12,11 @@ const novaAvaliacao = {
 };
 
 await prisma.avaliacao.create({ data: novaAvaliacao });
+
+possiveis problemas:
+- e o deploy?
+- onde o banco ficará hospedado?
+- e a persistencia desses dados?
+- como resolver o travamento da rede de se comunicar com serviços externos?
+- algo de repetidor funciona?
+e se salvar em excel? 
